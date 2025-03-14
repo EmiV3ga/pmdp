@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Fuente global modificada */
     background-color: #f5f5f5;
     color: #333;
 }
@@ -45,7 +45,7 @@ nav {
     text-decoration: none;
     color: white;
     font-size: 16px;
-    transition: 0.3s;
+    transition: 0.3s; /* Agregado transición */
 }
 
 .nav-links a:hover {
@@ -82,7 +82,7 @@ nav {
 }
 
 .hero .btn:hover {
-    background-color: #0088cc;
+    background-color: #0088cc; /* Agregado cambio de color al pasar el ratón */
 }
 
 /* === Sección de productos === */
@@ -97,7 +97,7 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 110 0px;
+    max-width: 1100px;
     margin: auto;
 }
 
@@ -165,12 +165,12 @@ nav {
     max-width: 500px;
     margin: 20px auto;
     transform: scale(1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Agregado */
 }
 
 .form-container:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Agregado */
 }
 
 /* Estilos para el formulario */
@@ -206,13 +206,13 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Agregado */
 }
 
 /* Efecto al pasar el mouse sobre el botón */
 button:hover {
     background-color: #2563eb;
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* Agregado */
 }
 
 /* Animación de entrada para el formulario */
@@ -229,7 +229,7 @@ button:hover {
 
 /* Aplicar la animación al contenedor del formulario */
 .form-container {
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out; /* Agregado */
 }
 
 /* Estilos para el placeholder */
@@ -249,6 +249,7 @@ textarea {
 textarea:focus {
     min-height: 120px;
 }
+
 /* Estilos para la tarjeta de información de contacto */
 .contact-card {
     background: #f9f9f9; /* Fondo claro para la tarjeta */
@@ -296,11 +297,11 @@ footer {
 .social-media img {
     width: 50px;    
     height: 50px;
-    transition: transform 0.3s;
+    transition: transform 0.3s; /* Agregado */
 }
 
 .social-media img:hover {
-    transform: scale(1.2);
+    transform: scale(1.2); /* Agregado */
 }
 
 /* === Sección Acerca de === */
@@ -342,4 +343,76 @@ footer {
     width: 80%;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Media Queries === */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .productos-container {
+        flex-direction: column;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* === Estilos para la sección de enlaces adicionales === */
+.servicios-enlaces {
+    background-color: #ffffff; /* Fondo blanco para separar del resto de la sección */
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-top: 30px; /* Separar de la sección anterior */
+}
+
+.servicios-enlaces h3 {
+    font-size: 24px;
+    color: #004466;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de los enlaces (flexbox para alinearlos de forma horizontal) */
+.enlaces-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Estilos para cada enlace de tipo botón */
+.enlace-boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #004466;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    width: 200px; /* Ancho fijo para que todos los botones sean del mismo tamaño */
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.enlace-boton:hover {
+    background-color: #00ccff; 
+    transform: translateY(-2px); /* Efecto de deslizamiento al pasar el mouse */
+}
+
+/* Estilos para la imagen dentro del botón */
+.enlace-imagen {
+    width: 30px; /* Tamaño fijo para las imágenes */
+    height: auto;
+    margin-right: 10px; /* Espaciado entre la imagen y el texto */
+}
+
+/* Efecto de enfoque */
+.enlace-boton:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 204, 255, 0.5); /* Efecto al enfocar los enlaces */
 }
