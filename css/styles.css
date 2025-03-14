@@ -416,3 +416,60 @@ footer {
     outline: none;
     box-shadow: 0 0 0 4px rgba(0, 204, 255, 0.5); /* Efecto al enfocar los enlaces */
 }
+/* === Sección de Sponsors === */
+.sponsors {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 50px 20px; /* Espaciado */
+    text-align: center; /* Centrar el contenido */
+}
+
+.sponsors h2 {
+    font-size: 30px;
+    color: #004466; /* Color de título */
+    margin-bottom: 30px; /* Espaciado debajo del título */
+}
+
+/* Contenedor de los logos de los patrocinadores */
+.sponsors-container {
+    display: flex;
+    justify-content: center; /* Centrar los logos */
+    gap: 40px; /* Espaciado entre los logos */
+    flex-wrap: wrap; /* Asegura que los logos se ajusten en pantallas pequeñas */
+    overflow: hidden; /* Esconde cualquier logo fuera del contenedor */
+}
+
+/* Estilo de cada logo de patrocinador */
+.sponsor-logo {
+    width: 250px; /* Tamaño reducido de las imágenes */
+    height: auto; /* Mantiene la proporción de la imagen */
+    transition: transform 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Efecto de hover en los logos */
+.sponsor-logo:hover {
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño */
+}
+
+/* Animación de deslizamiento para los logos */
+@keyframes slideSponsors {
+    0% {
+        transform: translateX(100%); /* Comienza fuera del contenedor por la derecha */
+    }
+    50% {
+        transform: translateX(0); /* Se detiene en su posición original */
+    }
+    100% {
+        transform: translateX(-100%); /* Se mueve hacia la izquierda, fuera del contenedor */
+    }
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .sponsors-container {
+        gap: 20px; /* Reducir el espacio entre los logos en pantallas pequeñas */
+    }
+
+    .sponsor-logo {
+        width: 100px; /* Reducir aún más el tamaño de los logos en pantallas pequeñas */
+    }
+}
