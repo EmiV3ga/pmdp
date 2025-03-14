@@ -473,3 +473,155 @@ footer {
         width: 100px; /* Reducir aún más el tamaño de los logos en pantallas pequeñas */
     }
 }
+/* === Sección de Servicios === */
+.services {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f4; /* Fondo suave para la sección */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.services h2 {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    font-size: 36px;
+    color: #004466;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Agregar una línea de subrayado animada en el título */
+.services h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 3px;
+    background-color: #0066cc;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    animation: underline 0.5s ease-out forwards;
+}
+
+@keyframes underline {
+    to {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+/* Contenedor del mapa y las zonas */
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Estilo para la imagen del mapa */
+.mapa-argentina {
+    width: 50%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo para las zonas */
+.zonas {
+    font-size: 18px;
+    color: #004466;
+    max-width: 300px;
+    text-align: left;
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zonas h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #0066cc; /* Color más vibrante para el título */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+/* Agregar un efecto hover para las zonas */
+.zonas:hover {
+    transform: translateY(-10px); /* Elevar las zonas al pasar el cursor */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Aumentar sombra al pasar el cursor */
+}
+
+/* Estilo para las listas de ubicaciones */
+.zonas ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.zonas ul li {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #004466;
+    position: relative;
+    padding-left: 30px; /* Espacio para los íconos */
+}
+
+/* Agregar íconos modernos a las ubicaciones */
+.zonas ul li::before {
+    content: '\2022'; /* Puntos para las ubicaciones */
+    font-size: 30px;
+    color: #0066cc; /* Color vibrante para los íconos */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .map-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mapa-argentina {
+        width: 100%;
+    }
+}
+
+/* === Animación de Mapa === */
+@keyframes slideMap {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.anim-map {
+    animation: slideMap 1s ease-out forwards;
+}
+
+/* === Animación de las Zonas === */
+@keyframes fadeInZones {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.anim-zones {
+    animation: fadeInZones 1s ease-out forwards;
+    animation-delay: 0.5s; /* Retardo para que las zonas aparezcan después del mapa */
+}
