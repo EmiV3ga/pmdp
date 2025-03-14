@@ -1,0 +1,345 @@
+/* === Configuración general === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* === Estilos del header === */
+header {
+    background-color: #004466;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00ccff;
+}
+
+/* === Sección Hero === */
+.hero {
+    background: url('../img/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.hero .btn {
+    display: inline-block;
+    background-color: #00ccff;
+    padding: 12px 20px;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #0088cc;
+}
+
+/* === Sección de productos === */
+.productos {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+}
+
+.productos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 110 0px;
+    margin: auto;
+}
+
+.producto {
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.producto h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.servicios {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #004466;
+    color: white;
+}
+
+.servicios-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre los elementos */
+}
+
+.servicio-item {
+    text-align: center;
+    width: 150px; /* Ancho fijo para cada elemento */
+}
+
+.servicio-icon {
+    width: 100px; /* Tamaño de la imagen */
+    height: auto; /* Mantiene la proporción */
+    margin-bottom: 10px; /* Espaciado entre la imagen y el texto */
+}
+
+.servicio-item p {
+    font-size: 18px; /* Tamaño del texto */
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+/* === Sección de Contacto === */
+.contacto {
+    text-align: center;
+    padding: 50px 20px;
+    background: white;
+}
+
+.form-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para los campos de entrada */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-size: 16px;
+}
+
+/* Efecto al enfocar los campos */
+input:focus, textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+    outline: none;
+}
+
+/* Estilos para el botón */
+button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* Animación de entrada para el formulario */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar la animación al contenedor del formulario */
+.form-container {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Estilos para el placeholder */
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Efecto de transición en el textarea */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+    transition: min-height 0.3s ease;
+}
+
+textarea:focus {
+    min-height: 120px;
+}
+/* Estilos para la tarjeta de información de contacto */
+.contact-card {
+    background: #f9f9f9; /* Fondo claro para la tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px auto; /* Margen automático para centrar */
+    max-width: 500px; /* Ancho máximo */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+.contact-card h3 {
+    margin-top: 0; /* Eliminar margen superior */
+    color: #333; /* Color del título */
+}
+
+.contact-card p {
+    margin: 10px 0; /* Espaciado entre párrafos */
+}
+
+/* Estilos para los iconos */
+.contact-card i {
+    margin-right: 8px; /* Espaciado entre icono y texto */
+    color: #3b82f6; /* Color de los iconos */
+}
+
+/* === Estilos para el footer y las redes sociales === */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+.social-media {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media img {
+    width: 50px;    
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.social-media img:hover {
+    transform: scale(1.2);
+}
+
+/* === Sección Acerca de === */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about-content {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.about-content h2 {
+    font-size: 28px;
+    color: #004466;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555555;
+}
+
+.about-image {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-image img {
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}

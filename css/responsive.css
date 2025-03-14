@@ -1,0 +1,15 @@
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+    }
+    
+    .productos-container {
+        flex-direction: column;
+    }
+    
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+}

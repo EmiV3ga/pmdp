@@ -1,0 +1,12 @@
+{
+  "name": "pmdp-web",
+  "version": "1.0.0",
+  "description": "Este es el código fuente del sitio web de PMdP.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Emiliano Vega",
+  "license": "MIT"
+}
