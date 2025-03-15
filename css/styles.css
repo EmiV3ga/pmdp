@@ -26,19 +26,45 @@ nav {
     margin: auto;
 }
 
+/* Logo con texto */
 .logo {
-    font-size: 24px;
+    display: flex; /* Alineación en fila de la imagen y el texto */
+    align-items: center; /* Alineación vertical */
+    font-size: 30px; /* Aumenta el tamaño del texto */
     color: white;
     font-weight: bold;
+    margin: auto 0; /* Margen automático arriba y abajo, 0 a los lados */
+    
 }
 
+.logo a {
+    display: flex;
+    align-items: center; /* Mantiene la alineación vertical del contenido */
+    color: white;
+    text-decoration: none; /* Elimina subrayado */
+}
+
+/* Si tienes un logo como imagen */
+.logo img {
+    width: 40px;; /* Ajusta el tamaño de la imagen del logo */
+    height: auto; /* Mantén la proporción de la imagen */
+    margin-right: 10px; /* Separación entre la imagen y el texto */
+    vertical-align: middle; /* Asegura alineación con el texto */
+}
+
+.logo span {
+    font-size: 24px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos del menú de navegación */
 .nav-links {
     list-style: none;
     display: flex;
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 0 25px;
 }
 
 .nav-links a {
@@ -96,7 +122,7 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px; /* Aumenté el espacio entre los productos */
     max-width: 1100px;
     margin: auto;
 }
@@ -111,7 +137,8 @@ nav {
 }
 
 .producto img {
-    width: 100%;
+    width: 80%; /* Ajusté el tamaño de las imágenes al 80% del contenedor */
+    max-width: 250px; /* Asegura que no superen los 250px de ancho */
     border-radius: 5px;
 }
 
@@ -120,6 +147,7 @@ nav {
     font-size: 20px;
 }
 
+/* === Sección de Servicios === */
 .servicios {
     text-align: center;
     padding: 50px 20px;
@@ -131,7 +159,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Espaciado entre los elementos */
+    gap: 30px; /* Aumenté el espacio entre los elementos de servicio */
 }
 
 .servicio-item {
@@ -140,15 +168,17 @@ nav {
 }
 
 .servicio-icon {
-    width: 100px; /* Tamaño de la imagen */
-    height: auto; /* Mantiene la proporción */
+    width: 130px; /* Tamaño ajustado de la imagen */
+    height: auto; /* Asegura que las imágenes sean cuadradas */
     margin-bottom: 10px; /* Espaciado entre la imagen y el texto */
+    object-fit: contain; /* Mantiene la proporción original de las imágenes */
 }
 
 .servicio-item p {
     font-size: 18px; /* Tamaño del texto */
-    margin: 0; /* Elimina el margen predeterminado */
+    margin: 10px; /* Elimina el margen predeterminado */
 }
+
 
 /* === Sección de Contacto === */
 .contacto {
@@ -481,12 +511,29 @@ footer {
     border-radius: 10px; /* Bordes redondeados */
 }
 
+/* Título con nueva fuente y diseño */
 .services h2 {
-    font-family: 'Poppins', sans-serif; /* Fuente moderna */
-    font-size: 36px;
+    font-family: 'Montserrat', sans-serif; /* Fuente moderna y elegante */
+    font-size: 48px;
     color: #004466;
     margin-bottom: 30px;
     position: relative;
+    font-weight: 700; /* Texto más grueso */
+    text-transform: uppercase; /* Para hacerlo más impactante */
+    letter-spacing: 2px; /* Espaciado entre letras para mayor elegancia */
+    animation: slideFromBottom 1s ease-out forwards; /* Animación de deslizamiento */
+}
+
+/* Animación del título: deslizamiento desde abajo */
+@keyframes slideFromBottom {
+    0% {
+        transform: translateY(30px); /* Empieza desplazado hacia abajo */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Agregar una línea de subrayado animada en el título */
@@ -503,6 +550,7 @@ footer {
     animation: underline 0.5s ease-out forwards;
 }
 
+/* Animación de la línea de subrayado */
 @keyframes underline {
     to {
         transform: scaleX(1);
