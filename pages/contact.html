@@ -18,7 +18,7 @@
             <div class="logo">
                 <a href="../index.html">
                     <img src="../Logo-pmd.ico" alt="Logo PMdP">
-                    <span>PMdP</span> <!-- Aquí agregas el texto -->
+                    <span> PMdP S.A </span> <!-- Aquí agregas el texto -->
                 </a>
             </div>
             <ul class="nav-links">
@@ -40,19 +40,31 @@
                 <input type="text" name="nombre" placeholder="Tu Nombre" required>
                 <input type="email" name="email" placeholder="Tu Email" required>
                 <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea>
+
+                <!-- reCAPTCHA de Google -->
+                <div class="g-recaptcha" data-sitekey="6Let-PQqAAAAABA0bfhQClo6pwOjuH_EW0FgFYUU"></div>
+
                 <button type="submit">Enviar</button>
             </form>
         </div>
     
         <!-- Tarjeta de Información de Contacto -->
-        <div class="contact-card">
-            <h3>Información de Contacto</h3>
-            <p><strong><i class="fas fa-phone"></i> Teléfono:</strong> 2236015815</p>
-            <p><strong><i class="fas fa-envelope"></i> Email:</strong> <a href="mailto:info@pmdp.com.ar">info@pmdp.com.ar</a></p>
-            <p><strong><i class="fas fa-map-marker-alt"></i> Dirección:</strong> Av. Champagnat 3490, Mar del Plata</p>
-            <p><strong><i class="fas fa-map-marker-alt"></i> Otra Dirección:</strong> Ruta 88, KM 3,3 (Abasto Central), Mar del Plata</p>
-            <p><strong><i class="fas fa-warehouse"></i> Depósito:</strong> Avellaneda 341, Coronel Vidal</p>
-        </div>
+       <!-- Tarjeta de Información de Contacto -->
+<div class="contact-card">
+    <h3>Información de Contacto</h3>
+    <p><strong><i class="fas fa-phone"></i> Teléfono:</strong> 2236015815</p>
+    <p><strong><i class="fas fa-envelope"></i> Email:</strong> <a href="mailto:info@pmdp.com.ar">info@pmdp.com.ar</a></p>
+    <p><strong><i class="fas fa-map-marker-alt"></i> Central principal:</strong> 
+        <a href="https://www.google.com/maps?q=Av.+Champagnat+3490,+Mar+del+Plata" target="_blank">Av. Champagnat 3490, Mar del Plata</a>
+    </p>
+    <p><strong><i class="fas fa-map-marker-alt"></i> Dirección:</strong> 
+        <a href="https://www.google.com/maps?q=Ruta+88,+KM+3.3+(Abasto+Central),+Mar+del+Plata" target="_blank">Ruta 88, KM 3,3 (Abasto Central), Mar del Plata</a>
+    </p>
+    <p><strong><i class="fas fa-warehouse"></i> Depósito:</strong> 
+        <a href="https://www.google.com/maps?q=Avellaneda+341,+Coronel+Vidal" target="_blank">Avellaneda 341, Coronel Vidal</a>
+    </p>
+</div>
+
     </section>
 
       <!-- Sección de patrocinadores -->
@@ -64,10 +76,31 @@
             <img src="../img/LiquiMoly-logo.png" alt="Liqui Moly" class="sponsor-logo">    
         </div>
     </section>
+
+        <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5492236015815" class="whatsapp-btn" target="_blank">
+        <img src="../aassets/whatsapp-icon.ico" alt="WhatsApp">
+    </a>
+
     <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com/PMdPSA/" target="_blank" rel="noopener noreferrer">
+                <img src="../img/facebook-icon.png" alt="Facebook" style="width: 24px; height: 24px;">
+            </a>
+            <a href="https://www.instagram.com/pmdpsa/" target="_blank" rel="noopener noreferrer">
+                <img src="../img/instagram-icon.png" alt="Instagram" style="width: 24px; height: 24px;">
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=5492236015815&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                <img src="../img/Wpp-icon.png" alt="WhatsApp" style="width: 24px; height: 24px;">
+            </a>
+        </div>
+
         <p>&copy; 2025 PMdP - Todos los derechos reservados.</p>
     </footer>
 
     <script src="../js/form-validation.js"></script>
+    <!-- Script de reCAPTCHA (debe estar antes del cierre de </body>) -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </body>
 </html>

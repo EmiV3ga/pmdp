@@ -159,26 +159,39 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px; /* Aumenté el espacio entre los elementos de servicio */
+    gap: 30px; /* Espacio entre los elementos */
 }
 
 .servicio-item {
     text-align: center;
-    width: 150px; /* Ancho fijo para cada elemento */
+    width: 180px; /* Mantiene el mismo ancho */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinea el contenido desde arriba */
+    height: 220px; /* Ajusta la altura total para que todo quede parejo */
 }
 
 .servicio-icon {
-    width: 130px; /* Tamaño ajustado de la imagen */
-    height: auto; /* Asegura que las imágenes sean cuadradas */
-    margin-bottom: 10px; /* Espaciado entre la imagen y el texto */
-    object-fit: contain; /* Mantiene la proporción original de las imágenes */
+    width: 120px; /* Tamaño uniforme para los iconos */
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px; /* Espaciado uniforme con el texto */
 }
 
 .servicio-item p {
-    font-size: 18px; /* Tamaño del texto */
-    margin: 10px; /* Elimina el margen predeterminado */
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px; /* Asegura que todos los textos ocupen el mismo espacio */
+    width: 90%; /* Para que no se vea muy estrecho */
 }
-
 
 /* === Sección de Contacto === */
 .contacto {
@@ -672,4 +685,29 @@ footer {
 .anim-zones {
     animation: fadeInZones 1s ease-out forwards;
     animation-delay: 0.5s; /* Retardo para que las zonas aparezcan después del mapa */
+}
+/* === Botón flotante de WhatsApp === */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    z-index: 1000;
+}
+
+.whatsapp-btn img {
+    width: 40px;
+    height: 40px;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
 }
