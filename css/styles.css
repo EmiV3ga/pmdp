@@ -94,8 +94,8 @@ nav {
 
 /* === Sección Hero === */
 .hero {
-    background: url('../img/Pmdp-Sucursal.jpg') no-repeat center center/cover;
-    color: white;
+    background: url('../img/Pmdp-Sucursal.png') no-repeat center center/cover;
+    color: rgb(0, 204,255);
     text-align: center;
     padding: 100px 20px;
 }
@@ -111,7 +111,7 @@ nav {
 
 .hero .btn {
     display: inline-block;
-    background-color: #00ccff;
+    background-color: rgb(0, 204, 255);
     padding: 12px 20px;
     margin-top: 10px;
     color: white;
@@ -545,7 +545,8 @@ footer {
 .services {
     padding: 50px 20px;
     text-align: center;
-    background-color: #f4f4f4; /* Fondo suave para la sección */
+    background-color: #004466; /* Color de fondo vibrante */
+    background: linear-gradient(135deg, #004466 0%, #00ccff 100%); /* Degradado */
     border-radius: 10px; /* Bordes redondeados */
 }
 
@@ -553,13 +554,17 @@ footer {
 .services h2 {
     font-family: 'Montserrat', sans-serif; /* Fuente moderna y elegante */
     font-size: 48px;
-    color: #004466;
+    color: #ffffff; /* Cambiar a blanco para mayor contraste */
     margin-bottom: 30px;
     position: relative;
     font-weight: 700; /* Texto más grueso */
     text-transform: uppercase; /* Para hacerlo más impactante */
     letter-spacing: 2px; /* Espaciado entre letras para mayor elegancia */
     animation: slideFromBottom 1s ease-out forwards; /* Animación de deslizamiento */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #004466; /* Fondo semi-transparente */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
 }
 
 /* Animación del título: deslizamiento desde abajo */
@@ -582,7 +587,7 @@ footer {
     bottom: -10px;
     width: 100%;
     height: 3px;
-    background-color: #0066cc;
+    background-color: #004466; /* Color vibrante para la línea */
     transform: scaleX(0);
     transform-origin: bottom right;
     animation: underline 0.5s ease-out forwards;
@@ -613,26 +618,41 @@ footer {
     max-width: 600px;
     border-radius: 15px; /* Bordes redondeados */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    animation: slideMap 1s ease-out forwards; /* Animación de deslizamiento */
+}
+
+/* === Animación de Mapa === */
+@keyframes slideMap {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 /* Estilo para las zonas */
 .zonas {
     font-size: 18px;
-    color: #004466;
+    color: #004466; /* Color del texto */
     max-width: 300px;
     text-align: left;
-    background-color: #fff; /* Fondo blanco */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Título de las zonas */
 .zonas h3 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #0066cc; /* Color más vibrante para el título */
+    color: #004466; /* Color más vibrante para el título */
     text-transform: uppercase; /* Texto en mayúsculas */
+    text-align: center; /* Centrar el texto */
 }
 
 /* Agregar un efecto hover para las zonas */
@@ -649,67 +669,55 @@ footer {
 
 .zonas ul li {
     margin-bottom: 15px;
-    font-size: 18px;
-    color: #004466;
+    font-size: 18px; /* Aumentar el tamaño de fuente */
+    color: #004466; /* Color del texto */
     position: relative;
     padding-left: 30px; /* Espacio para los íconos */
+    transition: color 0.3s; /* Transición suave para el color */
 }
 
 /* Agregar íconos modernos a las ubicaciones */
 .zonas ul li::before {
     content: '\2022'; /* Puntos para las ubicaciones */
     font-size: 30px;
-    color: #0066cc; /* Color vibrante para los íconos */
+    color: #004466; /* Color vibrante para los íconos */
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    font-weight: bold;
 }
 
-/* Media Query para pantallas pequeñas */
-@media (max-width: 768px) {
-    .map-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .mapa-argentina {
-        width: 100%;
-    }
+/* Efecto hover para las ubicaciones */
+.zonas ul li:hover {
+    color: #004466; /* Cambiar el color del texto al pasar el cursor */
 }
 
-/* === Animación de Mapa === */
-@keyframes slideMap {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
+/* Estilo para el contenedor de la sección */
+.services {
+    border: 2px solid #004466; /* Borde dorado alrededor de la sección */
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Para que los bordes redondeados se apliquen correctamente */
+}
+
+/* Estilo para el fondo de la sección */
+.services {
+    background: url('../img/Camion\ Pmdp.png') no-repeat center center/cover; /* Fondo con imagen */
+    position: relative; /* Para posicionar elementos absolutamente dentro */
+}
+
+/* Efecto de parpadeo en el título */
+@keyframes blink {
+    0%, 100% {
         opacity: 1;
     }
-}
-
-.anim-map {
-    animation: slideMap 1s ease-out forwards;
-}
-
-/* === Animación de las Zonas === */
-@keyframes fadeInZones {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
+    50% {
+        opacity: 0.5;
     }
 }
 
-.anim-zones {
-    animation: fadeInZones 1s ease-out forwards;
-    animation-delay: 0.5s; /* Retardo para que las zonas aparezcan después del mapa */
+/* Aplicar el efecto de parpadeo al título */
+.services h2 {
+    animation: blink 1.5s infinite; /* Efecto de parpadeo continuo */
 }
 /* === Botón flotante de WhatsApp === */
 .whatsapp-btn {
@@ -779,4 +787,92 @@ footer {
     .carousel-images img {
         max-width: 100%; /* Asegúrate de que las imágenes se ajusten al contenedor */
     }
+}
+/* Estilos para la sección de Distribución de Combustible */
+/* Estilos para la sección de Distribución de Combustible */
+.distribucion-combustible {
+    padding: 40px 20px;
+    background-color: #004466; /* Color de fondo oscuro */
+    color: white; /* Color del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px 0; /* Margen superior e inferior */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.container {
+    display: flex; /* Usar flexbox para alinear el contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: space-between; /* Espacio entre el contenido y la imagen */
+}
+
+.content {
+    flex: 1; /* Permitir que el contenido ocupe el espacio disponible */
+    padding-right: 20px; /* Espacio entre el contenido y la imagen */
+}
+
+.image {
+    flex: 0 0 40%; /* La imagen ocupará el 40% del ancho */
+}
+
+.image img {
+    max-width: 100%; /* Asegurarse de que la imagen no exceda el ancho del contenedor */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+.distribucion-combustible h2 {
+    font-family: 'Montserrat', sans-serif; /* Cambia la fuente del título */
+    color: #ffffff; /* Color del encabezado */
+    font-size: 28px; /* Tamaño de fuente más grande */
+    margin-bottom: 15px; /* Espaciado inferior */
+    text-align: left; /* Alinear el texto a la izquierda */
+    display: flex; /* Usar flexbox para alinear el ícono y el texto */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.distribucion-combustible .icon {
+    width: 40px; /* Ancho del ícono */
+    height: 40px; /* Alto del ícono */
+    margin-right: 10px; /* Espaciado a la derecha del ícono */
+}
+
+.distribucion-combustible p {
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin-bottom: 10px; /* Espaciado inferior */
+    text-align: left; /* Alinear el texto a la izquierda */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #e0e0e0; /* Color del texto */
+}
+
+.distribucion-combustible ul {
+    list-style-type: none; /* Eliminar viñetas */
+    padding: 0; /* Eliminar padding */
+}
+
+.distribucion-combustible ul li {
+    margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+    display: flex; /* Usar flexbox para alinear íconos y texto */
+    align-items: center; /* Centrar verticalmente */
+    font-size: 18px; /* Aumentar el tamaño de fuente */
+}
+
+.distribucion-combustible ul li .icon {
+    width: 20px; /* Ancho del ícono */
+    height: 20px; /* Alto del ícono */
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.contact-button {
+    display: inline-block; /* Hacer que el botón sea un bloque en línea */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #4c5d66; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    margin: 20px auto; /* Centrar el botón */
+    text-align: center; /* Alinear el texto del botón al centro */
+}
+
+.contact-button:hover {
+    background-color: #e6b800; /* Color de fondo al pasar el mouse */
 }
