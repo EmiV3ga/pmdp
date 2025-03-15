@@ -1,4 +1,4 @@
-/* === Configuración general === */
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +6,15 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Fuente global */
-    background-color: #f5f5f5; /* Color de fondo */
-    color: #333; /* Color del texto */
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 /* === Estilos del header === */
 header {
-    background-color: #004466; /* Color de fondo del header */
-    padding: 20px;
+    background-color: #004466;
+    padding: 10px;
 }
 
 nav {
@@ -27,31 +27,24 @@ nav {
 
 /* Logo con texto */
 .logo {
-    display: flex; /* Alineación en fila de la imagen y el texto */
-    align-items: center; /* Alineación vertical */
-    font-size: 40px; /* Aumenta el tamaño del texto */
+    display: flex;
+    align-items: center;
+    font-size: 30px;
     color: white;
     font-weight: bold;
-    margin: auto 0; /* Margen automático arriba y abajo, 0 a los lados */
 }
 
 .logo a {
     display: flex;
-    align-items: center; /* Mantiene la alineación vertical del contenido */
+    align-items: center;
     color: white;
-    text-decoration: none; /* Elimina subrayado */
+    text-decoration: none;
 }
 
 .logo img {
-    width: 40px; /* Ajusta el tamaño de la imagen del logo */
-    height: auto; /* Mantén la proporción de la imagen */
-    margin-right: 10px; /* Separación entre la imagen y el texto */
-    vertical-align: middle; /* Asegura alineación con el texto */
-}
-
-.logo span {
-    font-size: 24px; /* Tamaño del texto */
-    font-weight: bold; /* Texto en negrita */
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
 }
 
 /* Estilos del menú de navegación */
@@ -68,11 +61,62 @@ nav {
     text-decoration: none;
     color: white;
     font-size: 16px;
-    transition: 0.3s; /* Agregado transición */
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: #00ccff; /* Color al pasar el ratón */
+    color: #00ccff;
+}
+
+/* Estilos para el botón de menú */
+.menu-toggle {
+    display: none; /* Ocultar el botón por defecto */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Ocultar el menú por defecto en móviles */
+        flex-direction: column; /* Cambiar a columna para vista móvil */
+        position: absolute;
+        top: 60px; /* Ajustar según la altura del header */
+        left: 0;
+        background-color: #004466; /* Color de fondo del menú */
+        width: 100%; /* Ancho completo */
+        z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+        padding: 20px; /* Espaciado interno */
+        border-radius: 8px; /* Bordes redondeados */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para un efecto moderno */
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostrar el menú cuando está activo */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar el botón de menú en móviles */
+    }
+
+    .nav-links li {
+        margin: 15px 0; /* Espacio entre cada sección */
+        text-align: center; /* Centrar el texto */
+    }
+
+    .nav-links a {
+        font-size: 18px; /* Aumentar el tamaño de la fuente en el menú */
+        padding: 10px; /* Espaciado interno para los enlaces */
+        transition: background-color 0.3s; /* Transición suave para el fondo */
+    }
+
+    .nav-links a:hover {
+        background-color: rgba(0, 204, 255, 0.3); /* Color de fondo al pasar el ratón */
+        border-radius: 5px; /* Bordes redondeados al pasar el ratón */
+    }
 }
 
 /* === Sección Hero === */
@@ -81,26 +125,24 @@ nav {
     color: rgb(0, 204, 255);
     text-align: center;
     padding: 100px 20px;
-    position: relative; /* Para posicionar el texto */
 }
 
-/* Sombra y color del texto en la sección hero */
 .hero h1 {
     font-size: 48px;
-    color: #ffffff; /* Color blanco para el título */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra del texto */
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 24px;
     margin: 10px 0;
-    color: #ffffff; /* Color blanco para el párrafo */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+    color: #ffffff;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero .btn {
     display: inline-block;
-    background-color: rgb(0, 204, 255);
+    background-color: #004466;
     padding: 12px 20px;
     margin-top: 10px;
     color: white;
@@ -111,9 +153,8 @@ nav {
 }
 
 .hero .btn:hover {
-    background-color: #0088cc; /* Cambio de color al pasar el ratón */
+    background-color: #004466;
 }
-
 /* === Sección de productos === */
 .productos {
     text-align: center;
@@ -125,7 +166,7 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px; /* Aumenté el espacio entre los productos */
+    gap: 30px;
     max-width: 1100px;
     margin: auto;
 }
@@ -140,8 +181,8 @@ nav {
 }
 
 .producto img {
-    width: 80%; /* Ajusté el tamaño de las imágenes al 80% del contenedor */
-    max-width: 250px; /* Asegura que no superen los 250px de ancho */
+    width: 80%;
+    max-width: 250px;
     border-radius: 5px;
 }
 
@@ -149,7 +190,6 @@ nav {
     margin-top: 10px;
     font-size: 20px;
 }
-
 /* === Sección de Servicios === */
 .servicios {
     text-align: center;
@@ -759,7 +799,9 @@ footer {
 
 .carousel-images img {
     width: 100%; /* Ajusta el tamaño de las imágenes al 100% del contenedor */
-    max-width: 250px; /* Asegura que no superen los 250px de ancho */
+    height: 150px; /* Establece una altura fija para todas las imágenes */
+    object-fit: cover; /* Mantiene la proporción de la imagen y recorta si es necesario */
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
 }
 
 .producto h3 {
@@ -770,11 +812,11 @@ footer {
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
     .carousel-images .producto {
-        min-width: 200px; /* Ajusta el ancho mínimo para pantallas más pequeñas */
+        min-width: 100%; /* Cada producto ocupará el 100% del ancho en móviles */
     }
 
     .carousel-images img {
-        max-width: 100%; /* Asegúrate de que las imágenes se ajusten al contenedor */
+        height: 150px; /* Mantener la altura fija para las imágenes en móviles */
     }
 }
 /* Estilos para la sección de Distribución de Combustible */
@@ -805,6 +847,7 @@ footer {
 
 .image img {
     max-width: 80%; /* Asegurarse de que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
     border-radius: 10px; /* Bordes redondeados para la imagen */
 }
 
@@ -864,4 +907,27 @@ footer {
 
 .contact-button:hover {
     background-color: #e6b800; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambiar a columna en móviles */
+        align-items: center; /* Centrar elementos */
+    }
+
+    .content {
+        padding-right: 0; /* Eliminar el espaciado a la derecha en móviles */
+        text-align: center; /* Centrar el texto en móviles */
+    }
+
+    .image {
+        width: 100%; /* La imagen ocupará el 100% del ancho en móviles */
+        display: flex; /* Usar flexbox para centrar la imagen */
+        justify-content: center; /* Centrar horizontalmente */
+    }
+
+    .image img {
+        max-width: 90%; /* Asegurarse de que la imagen no exceda el 90% del ancho del contenedor */
+    }
 }

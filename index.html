@@ -4,33 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMdP - Distribuidor Oficial Mobil</title>
-
     <!-- Meta descripción para SEO -->
     <meta name="description" content="Página oficial de PMdP, distribuidor de combustibles, lubricantes y aditivos de alta calidad.">
     <meta name="keywords" content="PMdP, combustibles, lubricantes, aditivos, automóviles, vehículos pesados">
-
     <!-- Importar la fuente desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
     <!-- Enlace a tu hoja de estilos principal -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
-
     <!-- Favicon -->
     <link rel="icon" href="Logo-pmd.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <nav>
-            <!-- Usar imagen en el logo con texto al lado -->
             <div class="logo">
                 <a href="index.html">
-                    <img src="Logo-pmd.ico" >
-                    <span> PMdP S.A </span> <!-- Agregado el texto PMdP -->
+                    <img src="Logo-pmd.ico" alt="Logo PMdP">
+                    <span> PMdP S.A </span>
                 </a>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
+            <button class="menu-toggle" id="menu-toggle">☰</button> <!-- Botón de menú -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="pages/services.html">Servicios</a></li>
                 <li><a href="pages/about.html">Nosotros</a></li>
                 <li><a href="pages/contact.html">Contacto</a></li>
@@ -43,50 +39,49 @@
         <p>Desde hace más de 30 años comercializamos combustibles, lubricantes y aditivos de alta calidad.</p>
         <a href="pages/contact.html" class="btn">Contáctanos</a>
     </section>
-
     <section class="productos">
         <h2>Nuestros Productos</h2>
         <div class="carousel">
             <div class="carousel-images">
                 <div class="producto">
-                    <img src="Productos Imagenes/Mobil-Delvac.jpg" alt="Mobil-Delvac" class="active">
+                    <img src="Productos Imagenes/Mobil-Delvac.jpg" alt="Mobil-Delvac" class="producto-imagen">
                     <h3>Mobil Delvac</h3>
                 </div>
                 <div class="producto">
-                    <img src="Productos Imagenes/Lubricantes moto.jpg" alt="Mobil-Super-Moto">
+                    <img src="Productos Imagenes/Lubricantes moto.jpg" alt="Mobil-Super-Moto" class="producto-imagen">
                     <h3>Mobil Super Moto</h3>
                 </div>
                 <div class="producto">
-                    <img src="Productos Imagenes/Productos de limpieza.jpg" alt="Productos de limpieza">
+                    <img src="Productos Imagenes/Productos de limpieza.jpg" alt="Productos de limpieza" class="producto-imagen">
                     <h3>Productos de limpieza</h3>
                 </div>
                 <div class="producto">
-                    <img src="Productos Imagenes/Filtros.jpg" alt="Filtros">
+                    <img src="Productos Imagenes/Filtros.jpg" alt="Filtros" class="producto-imagen">
                     <h3>Filtros de aceite</h3>
                 </div>
                 <div class="producto">
-                    <img src="Productos Imagenes/Filtro de aceite.jpg" alt="filtros">
-                    <h3>filtros de aceite</h3>
+                    <img src="Productos Imagenes/Filtro de aceite.jpg" alt="filtros" class="producto-imagen">
+                    <h3>Filtros de aceite</h3>
                 </div>
                 <div class="producto">
-                    <img src="Productos Imagenes/ProLine Diesel System Reiniger.webp" alt="ProLine Diesel System Reiniger">
+                    <img src="Productos Imagenes/ProLine Diesel System Reiniger.webp" alt="ProLine Diesel System Reiniger" class="producto-imagen">
                     <h3>ProLine Diesel System Reiniger</h3>
                 </div>
                 <div class="producto">
-                    <img src="Productos Imagenes/Mobil00.webp" alt="Mobil00">
-                    <h3>Lubricante </h3>
+                    <img src="Productos Imagenes/Mobil00.webp" alt="Mobil00" class="producto-imagen">
+                    <h3>Lubricante</h3>
                 </div>
                 <div class="producto">
-                    <img src="Productos Imagenes/Lubrincantes.jpg" alt="lubricantes">
-                    <h3>Lubricantes  </h3>
+                    <img src="Productos Imagenes/Lubricantes.jpg" alt="lubricantes" class="producto-imagen">
+                    <h3>Lubricantes</h3>
                 </div>
                 <div class="producto">
-                    <img src="Productos Imagenes/Grasas.jpg" alt="Grasas">
-                    <h3>Grasa </h3>
+                    <img src="Productos Imagenes/Grasas.jpg" alt="Grasas" class="producto-imagen">
+                    <h3>Grasa</h3>
                 </div>
                 <div class="producto">
-                    <img src="Productos Imagenes/Lubricantes chico.png" alt="PMdP00">
-                    <h3>Lubricantes </h3>
+                    <img src="Productos Imagenes/Lubricantes chico.png" alt="PMdP00" class="producto-imagen">
+                    <h3>Lubricantes</h3>
                 </div>
                 <!-- Agrega más productos según sea necesario -->
             </div>
@@ -102,6 +97,11 @@
             <img src="../img/LiquiMoly-logo.png" alt="Liqui Moly" class="sponsor-logo">    
         </div>
     </section>
+    
+        <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5492236015815" class="whatsapp-btn" target="_blank">
+        <img src="../aassets/whatsapp-icon.ico" alt="WhatsApp">
+    </a>
 
     <footer>
         <div class="social-media">

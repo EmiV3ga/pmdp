@@ -12,16 +12,17 @@
     <link rel="icon" href="../Logo-pmd.ico" type="image/x-icon">
 </head>
 <body>
+
     <header>
         <nav>
-            <!-- Usar imagen en el logo con texto al lado -->
             <div class="logo">
                 <a href="../index.html">
                     <img src="../Logo-pmd.ico" alt="Logo PMdP">
-                    <span> PMdP S.A </span> <!-- Aquí agregas el texto -->
+                    <span> PMdP S.A </span>
                 </a>
             </div>
-            <ul class="nav-links">
+            <button class="menu-toggle" id="menu-toggle">☰</button> <!-- Botón de menú -->
+            <ul class="nav-links" id="nav-links">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="services.html">Servicios</a></li>
                 <li><a href="about.html">Nosotros</a></li>
@@ -69,7 +70,7 @@
 
       <!-- Sección de patrocinadores -->
      <section class="sponsors">
-        <h2>Nuestros Patrocinadores</h2>
+        <h2>Nuestros Distribuidores</h2>
         <div class="sponsor-container">
             <img src="../img/Mobil-Logo.png" alt="Mobil" class="sponsor-logo">
             <img src="../img/Fram.png" alt="Fram" class="sponsor-logo">
@@ -95,11 +96,11 @@
             </a>
         </div>
 
-        <p>&copy; 2025 PMdP - Todos los derechos reservados.</p>
+        <p>&copy; 2023 PMdP - Todos los derechos reservados.</p>
     </footer>
-
+    <script src="../js/script.js"></script>
     <script src="../js/form-validation.js"></script>
-    <!-- Script de reCAPTCHA (debe estar antes del cierre de </body>) -->
+    <!-- Script de reCAPTCHA  -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </body>

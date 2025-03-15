@@ -41,3 +41,8 @@ setInterval(() => {
 document.addEventListener('DOMContentLoaded', () => {
     showSlide(currentSlide);
 });
+// Script para manejar el menú de hamburguesa
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active'); // Alternar la clase 'active' para mostrar/ocultar el menú
+});

@@ -11,17 +11,16 @@
         <link rel="icon" href="../Logo-pmd.ico" type="image/x-icon">
     </head>
 <body>
-
     <header>
         <nav>
-            <!-- Usar imagen en el logo con texto al lado -->
             <div class="logo">
                 <a href="../index.html">
-                    <img src="../Logo-pmd.ico" >
-                    <span> PMdP S.A </span> <!-- Aquí agregas el texto -->
+                    <img src="../Logo-pmd.ico" alt="Logo PMdP">
+                    <span> PMdP S.A </span>
                 </a>
             </div>
-            <ul class="nav-links">
+            <button class="menu-toggle" id="menu-toggle">☰</button> <!-- Botón de menú -->
+            <ul class="nav-links" id="nav-links">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="services.html">Servicios</a></li>
                 <li><a href="about.html">Nosotros</a></li>
@@ -29,7 +28,6 @@
             </ul>
         </nav>
     </header>
-    
     <section class="servicios">
         <h2>Nuestros Servicios</h2>
         <div class="servicios-lista">
@@ -99,7 +97,12 @@
             <img src="../img/LiquiMoly-logo.png" alt="Liqui Moly" class="sponsor-logo">    
         </div>
     </section>
-
+    
+        <!-- Botón flotante de WhatsApp -->
+        <a href="https://wa.me/5492236015815" class="whatsapp-btn" target="_blank">
+            <img src="../aassets/whatsapp-icon.ico" alt="WhatsApp">
+        </a>
+    
     <footer>
         <div class="social-media">
             <a href="https://www.facebook.com/PMdPSA/" target="_blank" rel="noopener noreferrer">
@@ -112,7 +115,8 @@
                 <img src="../img/Wpp-icon.png" alt="WhatsApp" style="width: 24px; height: 24px;">
             </a>
         </div>
-        <p>&copy; 2025 PMdP - Todos los derechos reservados.</p>
+        <p>&copy; 2023 PMdP - Todos los derechos reservados.</p>
     </footer>
+    <script src="../js/script.js"></script>
 </body>
 </html>
