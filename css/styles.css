@@ -7,9 +7,23 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Fuente global modificada */
+    font-family: 'Arial', sans-serif; /* Fuente global modificada */
     background-color: #f5f5f5;
     color: #333;
+}
+
+/* === Estilos del header === */
+header {
+    background-color: #004466;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
 }
 
 /* === Estilos del header === */
@@ -30,7 +44,7 @@ nav {
 .logo {
     display: flex; /* Alineación en fila de la imagen y el texto */
     align-items: center; /* Alineación vertical */
-    font-size: 30px; /* Aumenta el tamaño del texto */
+    font-size: 40px; /* Aumenta el tamaño del texto */
     color: white;
     font-weight: bold;
     margin: auto 0; /* Margen automático arriba y abajo, 0 a los lados */
@@ -80,7 +94,7 @@ nav {
 
 /* === Sección Hero === */
 .hero {
-    background: url('../img/hero-bg.jpg') no-repeat center center/cover;
+    background: url('../img/Pmdp-Sucursal.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -295,28 +309,39 @@ textarea:focus {
 
 /* Estilos para la tarjeta de información de contacto */
 .contact-card {
-    background: #f9f9f9; /* Fondo claro para la tarjeta */
+    background: #ffffff; /* Fondo blanco para la tarjeta */
+    border: 1px solid #e0e0e0; /* Borde sutil */
     border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     padding: 20px; /* Espaciado interno */
     margin: 20px auto; /* Margen automático para centrar */
     max-width: 500px; /* Ancho máximo */
     text-align: left; /* Alinear texto a la izquierda */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.contact-card:hover {
+    transform: translateY(-5px); /* Elevar la tarjeta al pasar el mouse */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
 }
 
 .contact-card h3 {
     margin-top: 0; /* Eliminar margen superior */
     color: #333; /* Color del título */
+    font-size: 1.5em; /* Tamaño de fuente más grande */
 }
 
 .contact-card p {
     margin: 10px 0; /* Espaciado entre párrafos */
+    font-size: 1em; /* Tamaño de fuente */
+    line-height: 1.5; /* Espaciado entre líneas */
 }
 
 /* Estilos para los iconos */
 .contact-card i {
-    margin-right: 8px; /* Espaciado entre icono y texto */
+    margin-right: 10px; /* Espaciado entre icono y texto */
     color: #3b82f6; /* Color de los iconos */
+    font-size: 1.6em; /* Tamaño de los iconos */
 }
 
 /* === Estilos para el footer y las redes sociales === */
@@ -710,4 +735,48 @@ footer {
 
 .whatsapp-btn:hover {
     transform: scale(1.1);
+}
+
+/* carrusel */
+/* Estilos para el carrusel */
+.carousel {
+    position: relative;
+    max-width: 1100px; /* Asegúrate de que coincida con el ancho máximo de tu contenedor */
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images .producto {
+    min-width: 50%; /* Cada producto ocupa el 50% del ancho del carrusel */
+    box-sizing: border-box; /* Asegúrate de que el padding y el border se incluyan en el ancho */
+    padding: 10px; /* Espaciado entre productos */
+    display: flex; /* Asegúrate de que el contenido dentro de cada producto esté centrado */
+    flex-direction: column; /* Alinear el contenido verticalmente */
+    align-items: center; /* Centrar horizontalmente el contenido */
+}
+
+.carousel-images img {
+    width: 100%; /* Ajusta el tamaño de las imágenes al 100% del contenedor */
+    max-width: 250px; /* Asegura que no superen los 250px de ancho */
+}
+
+.producto h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .carousel-images .producto {
+        min-width: 200px; /* Ajusta el ancho mínimo para pantallas más pequeñas */
+    }
+
+    .carousel-images img {
+        max-width: 100%; /* Asegúrate de que las imágenes se ajusten al contenedor */
+    }
 }
