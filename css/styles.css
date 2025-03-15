@@ -3,32 +3,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: 'Arial', sans-serif; /* Fuente global modificada */
-    background-color: #f5f5f5;
-    color: #333;
+    font-family: 'Roboto', sans-serif; /* Fuente global */
+    background-color: #f5f5f5; /* Color de fondo */
+    color: #333; /* Color del texto */
 }
 
 /* === Estilos del header === */
 header {
-    background-color: #004466;
-    padding: 20px;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    margin: auto;
-}
-
-/* === Estilos del header === */
-header {
-    background-color: #004466;
+    background-color: #004466; /* Color de fondo del header */
     padding: 20px;
 }
 
@@ -48,7 +33,6 @@ nav {
     color: white;
     font-weight: bold;
     margin: auto 0; /* Margen automático arriba y abajo, 0 a los lados */
-    
 }
 
 .logo a {
@@ -58,9 +42,8 @@ nav {
     text-decoration: none; /* Elimina subrayado */
 }
 
-/* Si tienes un logo como imagen */
 .logo img {
-    width: 40px;; /* Ajusta el tamaño de la imagen del logo */
+    width: 40px; /* Ajusta el tamaño de la imagen del logo */
     height: auto; /* Mantén la proporción de la imagen */
     margin-right: 10px; /* Separación entre la imagen y el texto */
     vertical-align: middle; /* Asegura alineación con el texto */
@@ -89,24 +72,30 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #00ccff;
+    color: #00ccff; /* Color al pasar el ratón */
 }
 
 /* === Sección Hero === */
 .hero {
     background: url('../img/Pmdp-Sucursal.png') no-repeat center center/cover;
-    color: rgb(0, 204,255);
+    color: rgb(0, 204, 255);
     text-align: center;
     padding: 100px 20px;
+    position: relative; /* Para posicionar el texto */
 }
 
+/* Sombra y color del texto en la sección hero */
 .hero h1 {
-    font-size: 36px;
+    font-size: 48px;
+    color: #ffffff; /* Color blanco para el título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra del texto */
 }
 
 .hero p {
     font-size: 18px;
     margin: 10px 0;
+    color: #ffffff; /* Color blanco para el párrafo */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra del texto */
 }
 
 .hero .btn {
@@ -122,7 +111,7 @@ nav {
 }
 
 .hero .btn:hover {
-    background-color: #0088cc; /* Agregado cambio de color al pasar el ratón */
+    background-color: #0088cc; /* Cambio de color al pasar el ratón */
 }
 
 /* === Sección de productos === */
@@ -815,7 +804,7 @@ footer {
 }
 
 .image img {
-    max-width: 100%; /* Asegurarse de que la imagen no exceda el ancho del contenedor */
+    max-width: 80%; /* Asegurarse de que la imagen no exceda el ancho del contenedor */
     border-radius: 10px; /* Bordes redondeados para la imagen */
 }
 
